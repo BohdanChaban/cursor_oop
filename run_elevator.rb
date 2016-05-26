@@ -5,8 +5,15 @@ elevator = elevator_setup.elevator
 
 elevator.state()
 
+u = 'up'
+d = 'down'
 
-# Enter command "elevator.control.floor_operation(floor, change_person)"
-elevator.control.floor_operation(3, +2)
-elevator.control.floor_operation(6, +2)
-elevator.control.floor_operation(1, -4)
+# Enter command "elevator.control.move(floor, change_person, direction(u or d))"
+elevator.control.move(3, +2, u)
+elevator.control.move(13, +2, d)
+elevator.control.move(7, +4, u)
+elevator.control.move(16, -3, d)
+elevator.control.move(8, -1, d)
+elevator.control.move(14, -2, u)
+
+elevator.control.start()
